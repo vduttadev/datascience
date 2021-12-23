@@ -1,0 +1,32 @@
+#Reference DB-Postgres (Truven data)
+REFDB:
+  USERNAME: bind
+  HOST: database.dev-bind.com
+  DB_NAME: reference_data
+  PASSWORD: B1ndR00t!
+  PORT: 5456
+
+DB:
+  NAME: opportunity
+  USER: bind
+  HOST: 172.18.0.2
+  PORT: 5432
+  PASSWORD: 'kmscrypt::AQICAHi8QtJppwqqHo5RWgKdEdd0eg8s3GPKwzizo+LCTy1UNgF5Tez+GIPW8Dqr+39m4w4QAAAAcjBwBgkqhkiG9w0BBwagYzBhAgEAMFwGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM07LaqjTDx7iphJ9dAgEQgC8TB7uCM+SzkYE3Anbpc+teY52DF2FTsNrFGkL91/Szv4u4hURkcJ7CPhu9/RR8tA=='
+  POOL_INITAL_START: 5
+  POOL_TOTAL_CONNECTION: 20
+
+KAFKA:
+  HOST_URL: kafka:9092
+  ZOOKEEPER_URL: zookeeper:2181
+  CONSUMER_GROUP: quoting_service
+  QUOTING_REQUEST_TOPIC: opportunity.current_plan
+  QUOTING_RESULT_TOPIC: opportunity.current_plan_evaluated
+
+SETTINGS:
+  DJANGO_SETTINGS_MODULE: control_panel.settings-docker
+  PROCESS_COUNT: 4
+  MOD: 100
+  BLOCK_QUEUE_SIZE: 5
+
+LOGGING:
+  LOG_GROUP: QUOTING

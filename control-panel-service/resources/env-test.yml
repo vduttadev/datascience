@@ -1,0 +1,32 @@
+#Reference DB-Postgres (Truven data)
+REFDB:
+  USERNAME: bind
+  HOST: big-reference-cluster.cluster-cwag3rldvfst.us-east-1.rds.amazonaws.com
+  DB_NAME: reference_data
+  PASSWORD: 'kmscrypt::AQICAHhyudebozg2Jnr8hMO6X7V8HDceBAM0mD5BC9ALYbbZCAFEKkivAtRFnUiuM7/M0jwmAAAAZzBlBgkqhkiG9w0BBwagWDBWAgEAMFEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMfffuHhnqLMNXd6YqAgEQgCT1vaTAhgNyoHpj27rtZafOcKbQss3eMcvB9isJVTvRGTbqqbg='
+  PORT: 5432
+
+DB:
+  NAME: opportunity
+  USER: bind
+  HOST: rds-postgres-test-bind.cwag3rldvfst.us-east-1.rds.amazonaws.com
+  PORT: 5432
+  PASSWORD: 'kmscrypt::AQICAHhyudebozg2Jnr8hMO6X7V8HDceBAM0mD5BC9ALYbbZCAFEKkivAtRFnUiuM7/M0jwmAAAAZzBlBgkqhkiG9w0BBwagWDBWAgEAMFEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMfffuHhnqLMNXd6YqAgEQgCT1vaTAhgNyoHpj27rtZafOcKbQss3eMcvB9isJVTvRGTbqqbg='
+  POOL_INITAL_START: 5
+  POOL_TOTAL_CONNECTION: 20
+
+KAFKA:
+  HOST_URL: kafka-test.dev-bind.com
+  ZOOKEEPER_URL: kafka-test.dev-bind.com
+  CONSUMER_GROUP: quoting_service
+  QUOTING_REQUEST_TOPIC: opportunity.current_plan
+  QUOTING_RESULT_TOPIC: opportunity.current_plan_evaluated
+
+SETTINGS:
+  DJANGO_SETTINGS_MODULE: settings-test
+  PROCESS_COUNT: 4
+  MOD: 100
+  BLOCK_QUEUE_SIZE: 5
+
+LOGGING:
+  LOG_GROUP: QUOTING

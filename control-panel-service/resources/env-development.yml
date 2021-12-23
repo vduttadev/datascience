@@ -1,0 +1,32 @@
+#Reference DB-Postgres (Truven data)
+REFDB:
+  USERNAME: bind
+  HOST: database.dev-bind.com
+  DB_NAME: reference_data
+  PASSWORD: B1ndR00t!
+  PORT: 5456
+
+DB:
+  NAME: postgres
+  USER: bind
+  HOST: db
+  PORT: 5432
+  PASSWORD: bind
+  POOL_INITAL_START: 8
+  POOL_TOTAL_CONNECTION: 20
+
+KAFKA:
+  HOST_URL: kafka:9092
+  ZOOKEEPER_URL: zookeeper:2181
+  CONSUMER_GROUP: quoting_service
+  QUOTING_REQUEST_TOPIC: opportunity.current_plan
+  QUOTING_RESULT_TOPIC: opportunity.current_plan_evaluated
+
+SETTINGS:
+  DJANGO_SETTINGS_MODULE: settings-development
+  PROCESS_COUNT: 1
+  MOD: 100
+  BLOCK_QUEUE_SIZE: 5
+
+LOGGING:
+  LOG_GROUP: QUOTING

@@ -1,0 +1,33 @@
+#Reference DB-Postgres (Truven data)
+REFDB:
+  USERNAME: bind
+  HOST: big-reference-cluster.cluster-cwag3rldvfst.us-east-1.rds.amazonaws.com
+  DB_NAME: reference_data
+  PASSWORD: 'kmscrypt::AQECAHiyAh7vHgaEt6qQEX+SFe8fOUeP89ZxtBnnj2QRl7LS5AAAAGcwZQYJKoZIhvcNAQcGoFgwVgIBADBRBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDHO/HxRzLzP7oxJf4gIBEIAkvZCUZ4bVyYxn/JGmNrB3/p+GDKtVMfdBJXavZdWDrgigMMJ3'
+  PORT: 5432
+
+DB:
+  NAME: postgres
+  USER: bind
+  HOST: rds-postgres-stage-bind.cwag3rldvfst.us-east-1.rds.amazonaws.com
+  PORT: 5432
+  PASSWORD: 'kmscrypt::AQECAHiyAh7vHgaEt6qQEX+SFe8fOUeP89ZxtBnnj2QRl7LS5AAAAHIwcAYJKoZIhvcNAQcGoGMwYQIBADBcBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDBqL1hfoBB5R5zz95wIBEIAvWUuaIiv35oh95DxDnEM2sCwvG/hJcvi5BSvd5LKX06e47wfYWFZicjF67S7g9OI='
+  POOL_INITAL_START: 5
+  POOL_TOTAL_CONNECTION: 20
+
+KAFKA:
+  HOST_URL: kafka-stage.dev-bind.com
+  ZOOKEEPER_URL: zk-stage.dev-bind.com
+  CONSUMER_GROUP: quoting_service
+  QUOTING_REQUEST_TOPIC: opportunity.current_plan
+  QUOTING_RESULT_TOPIC: opportunity.current_plan_evaluated
+  SSL: 'kafka.server.stage.pem'
+
+SETTINGS:
+  DJANGO_SETTINGS_MODULE: settings-stage
+  PROCESS_COUNT: 4
+  MOD: 100
+  BLOCK_QUEUE_SIZE: 5
+
+LOGGING:
+  LOG_GROUP: QUOTING

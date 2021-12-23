@@ -1,0 +1,64 @@
+//Prerequisites to run
+// * gradle
+// * BUILD_TAG environment variable
+
+//  copy files into the context directory for use within the Dockerfile.
+def copyDockerFiles(def projectRoot, def listFiles = false) {
+    String stageDir = file("${projectRoot}/build/docker").getCanonicalPath()
+    String repositoryRoot = file("../..").getCanonicalPath()
+    String dockerRoot = file("..").getCanonicalPath()
+
+    def filesToCopy = [
+        [
+            "from":file("${projectRoot}/docker/Dockerfile"),
+            "into":stageDir
+        ],
+        [
+            "from":fileTree(dir: "${projectRoot}/docker/bin"),
+            "into":"${stageDir}/bin"
+        ],
+        [
+            "from":fileTree(dir: "${projectRoot}/src/main/control_panel"),
+            "into":"${stageDir}/bin/control_panel"
+        ],
+        [
+            "from":fileTree(dir: "${projectRoot}/resources"),
+            "into":"${stageDir}/bin/control_panel/resources"
+        ],
+        [
+            "from":fileTree(dir: "${projectRoot}/docker/requirements.pip"),
+            "into":"${stageDir}/bin/"
+        ]
+    ]
+
+    if (listFiles) {
+        // print out the files
+        for (fileToCopy in filesToCopy) {
+            println(fileToCopy.get("from"))
+        }
+    } else {
+        // actually do the copying
+        for (fileToCopy in filesToCopy) {
+            copy {
+                from fileToCopy.get("from")
+                into fileToCopy.get("into")
+            }
+        }
+    }
+}
+
+task listDependencies(type: DependencyReportTask){ }
+
+task awsDocker(type: Exec) {
+    commandLine 'python3', '../aws/bin/build_docker.py', 'control-panel-service', System.getenv('BUILD_TAG') ?: 'local', "${awsRepositoryURI}", project.findProperty("extra_tag") ?: ""
+    doFirst {
+        copyDockerFiles(file('.'))
+    }
+}
+
+task dockerSetup(type: Exec){
+    commandLine 'echo', 'building docker stageDir'
+    doFirst {
+        copyDockerFiles(file('.'))
+    }
+}

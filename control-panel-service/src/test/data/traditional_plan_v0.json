@@ -1,0 +1,339 @@
+{
+   "opportunityId":"$UUID$",
+   "caseNumber":null,
+   "requestId":"$REQID$",
+   "groupName":"Test Account 1",
+   "currentPlansNbr":1,
+   "currentTiersNbr":4,
+   "rateFrequency":"X12",
+   "employeeContributionsFrequency":"X12",
+   "employeeContributionsEffectiveDate":"2020-01-01",
+   "employeeContributionsEndDate":"2020-12-31",
+   "desiredBindEffectiveDate":"2020-01-01",
+   "desiredBindEndDate":"2020-12-31",
+   "payPeriodFrequency":"X12",
+   "currentPlans":[
+      {
+         "opportunityId":"$UUID$",
+         "benefitPlanId":"cea432ea-dffc-4d5d-a06b-0ad1365e72b3",
+         "planName":"Test Plan A",
+         "planCarrier":{
+            "id":"40ecf02c-650b-11e9-a923-1681be663d3e",
+            "name":"Aetna"
+         },
+         "currentCarrier":null,
+         "fundingModel":{
+            "code":"FULLY_INSURED",
+            "description":"Fully Insured"
+         },
+         "planType":{
+            "code":"PPO",
+            "description":"PPO"
+         },
+         "payPeriodFrequency":null,
+         "effectiveDate":"2019-01-01",
+         "termDate":"2019-12-31",
+         "planTiers":[
+            {
+               "id":"fb50db68-5f92-45b7-a1ff-e51510148561",
+               "tier":{
+                  "description":"Subscriber Only",
+                  "code":"EMP"
+               },
+               "bindEligibleEnrollment":100,
+               "cobraRate":450.66,
+               "employeeContributions":90.13
+            },
+            {
+               "id":"6a6391e8-a726-45f8-accd-9b970d9a3e1a",
+               "tier":{
+                  "description":"Subscriber and Spouse",
+                  "code":"ESP"
+               },
+               "bindEligibleEnrollment":100,
+               "cobraRate":1043.26,
+               "employeeContributions":208.65
+            },
+            {
+               "id":"a7ab5def-b653-4632-a241-532dc9c13024",
+               "tier":{
+                  "description":"Subscriber and Child or Children",
+                  "code":"ECH"
+               },
+               "bindEligibleEnrollment":100,
+               "cobraRate":876.50,
+               "employeeContributions":175.30
+            },
+            {
+               "id":"98022cbd-35e6-4899-b470-a06098e44663",
+               "tier":{
+                  "description":"Family",
+                  "code":"FAM"
+               },
+               "bindEligibleEnrollment":100,
+               "cobraRate":1421.79,
+               "employeeContributions":284.36
+            }
+         ],
+         "fundingAccountType":{
+            "description":"HSA",
+            "code":"HSA"
+         },
+         "deductibleProvisionType":"AGGREGATE",
+         "outOfPocketProvisionType":"AGGREGATE",
+         "generalCoinsurance":20.00,
+         "separateRxDeductible":false,
+         "rxDeductiblePerMember":true,
+         "separateRxOutOfPocketMax":false,
+         "fundingDetails":{
+            "employerAccountFunding":{
+               "individualAmount":500.00,
+               "familyAmount":1000.00
+            },
+            "deductible":{
+               "individualAmount":2700.00,
+               "familyAmount":5400.00
+            },
+            "outOfPocketMaximum":{
+               "individualAmount":5400.00,
+               "familyAmount":10800.00
+            },
+            "rxDeductible":{
+               "individualAmount":null,
+               "familyAmount":null
+            },
+            "rxOutOfPocketMaximum":{
+               "individualAmount":null,
+               "familyAmount":null
+            }
+         },
+         "medicalCopays":[
+            {
+               "id":"0267bd28-505b-4633-98d4-98c1ce7a665e",
+               "treatmentTypeCode":{
+                  "description":"Preventive Care",
+                  "code":"Z000x00"
+               },
+               "description":"Preventive Care",
+               "copay":0.00,
+               "coverageType":{
+                  "description":"Covered 100%",
+                  "code":"COVERED_FULL"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"6bed5552-39ce-4a8f-907d-35dcec8e3dbe",
+               "treatmentTypeCode":{
+                  "description":"Primary Care Office Visit",
+                  "code":"Z000100"
+               },
+               "description":"Primary Care Office Visit",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"04d65c48-ad86-4044-8b32-5b5ab36d4b94",
+               "treatmentTypeCode":{
+                  "description":"Specialist Office Visit",
+                  "code":"Z000200"
+               },
+               "description":"Specialist Office Visit",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"e6ccdf66-c493-4ef9-8d92-f069c8bf0be8",
+               "treatmentTypeCode":{
+                  "description":"Diagnostic Test (X-ray, Blood work)",
+                  "code":"Z000400"
+               },
+               "description":"Diagnostic Test (X-ray, Blood work)",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"61bea1e0-146c-4a7e-b394-504f36e94544",
+               "treatmentTypeCode":{
+                  "description":"Advanced Imaging (CT/PET scans, MRIs)",
+                  "code":"Z000500"
+               },
+               "description":"Advanced Imaging (CT/PET scans, MRIs)",
+               "copay":10,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"8fc6a1a9-70bc-4c3f-9a20-8a96ea74c67f",
+               "treatmentTypeCode":{
+                  "description":"Outpatient Surgery",
+                  "code":"Z001000"
+               },
+               "description":"Outpatient Surgery",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"f9b21902-ec98-4450-9d5b-fc243ed8bbbb",
+               "treatmentTypeCode":{
+                  "description":"Emergency Room",
+                  "code":"Z001100"
+               },
+               "description":"Emergency Room",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"21408afb-3763-41af-81ab-28cefb5995bf",
+               "treatmentTypeCode":{
+                  "description":"Urgent Care",
+                  "code":"Z001300"
+               },
+               "description":"Urgent Care",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"85f189bb-bb8f-400b-b9dc-e00895190cef",
+               "treatmentTypeCode":{
+                  "description":"Inpatient Hospital Stay",
+                  "code":"Z001401"
+               },
+               "description":"Inpatient Hospital Stay",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            }
+         ],
+         "rxCopays":[
+            {
+               "id":"ee3f1934-b94d-4ee0-9d51-af60de099a64",
+               "treatmentTypeCode":{
+                  "description":"Tier 1 Drugs - 30 Days Supply",
+                  "code":"Z000801"
+               },
+               "description":"Tier 1 Drugs - 30 Days Supply",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"33488ac5-2690-4699-a381-5e20fb065127",
+               "treatmentTypeCode":{
+                  "description":"Tier 2 Drugs - 30 Days Supply",
+                  "code":"Z000802"
+               },
+               "description":"Tier 2 Drugs - 30 Days Supply",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"ba6a926f-3963-4a95-93fc-8998498d9664",
+               "treatmentTypeCode":{
+                  "description":"Tier 3 Drugs - 30 Days Supply",
+                  "code":"Z000803"
+               },
+               "description":"Tier 3 Drugs - 30 Days Supply",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible, then Coinsurance",
+                  "code":"DEDUCTIBLE_THEN_COINSURANCE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            },
+            {
+               "id":"d2d50aa4-9782-4be3-a853-9bc0e87a09cc",
+               "treatmentTypeCode":{
+                  "description":"Tier 4 Drugs (Specialty) - 30 Days Supply",
+                  "code":"Z000905"
+               },
+               "description":"Tier 4 Drugs (Specialty) - 30 Days Supply",
+               "copay":null,
+               "coverageType":{
+                  "description":"Deductible Only",
+                  "code":"DEDUCTIBLE"
+               },
+               "subjectToDeductible":null,
+               "coinsurance":null,
+               "coinsuranceMin":null,
+               "coinsuranceMax":null
+            }
+         ],
+         "delete":false
+      }
+   ],
+   "desiredBindPlan":null
+}

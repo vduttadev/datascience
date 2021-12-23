@@ -1,0 +1,43 @@
+# Gradle #
+.gradle
+/build/
+*/out/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Misc #
+bootServicesLog.txt
+npm-debug.log
+
+# IntelliJ IDEA #
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Eclipse #
+/bin/
+.project
+.classpath
+/.settings/
+
+# macOS #
+**/.Trash-*
+.DS_Store
+bind-fta/out/
+/member-gateway/src/main/webapp/documentation
+/member-gateway/src/main/webapp/sourcemaps
+/member-gateway/src/main/webapp/sourcemaps
+/bootServicesLog.txt
+bind-fta/debug.log
+gateway-common/build/
+domain/build/
+
+
+# VSCode #
+/.history/
+
+# Data Science #
+docker/**/build
+**/*.ipynb_checkpoints
+**/__pycache__
+**/.ipynb_checkpoints
